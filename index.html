@@ -17,38 +17,30 @@
                 <h1 class="card-header fs-6 mb-3 text-center text-light-emphasis">Formulario Personal</h1>
 
                 <label class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="input_nombre">
+                <input type="text" class="form-control" id="input_nombre" aria-describedby="indicacion">
+                <p id="indicacion" class="form-text">Sólo nombres reales, por favor</p>
 
                 <label class="form-label">Edad</label>
-                <input type="text" class="form-control" id="input_edad">
+                <input type="text" class="form-control" id="input_edad" aria-describedby="indicacion">
+                <p id="indicacion" class="form-text">Sólo numeros entre 13 y 93</p>
 
                 <label class="form-label">Dni</label>
                 <input type="text" class="form-control" id="input_dni" aria-describedby="indicacion">
-                <p id="indicacion" class="form-text">Sólo numeros</p>
+                <p id="indicacion" class="form-text">Sólo numeros entre 0 y 99999999</p>
 
                 <label class="form-label">Sexo</label>
-                    <div class="d-flex flex-row mb-2">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="check_hombre" id="input_hombre" value="H">
-                            <label class="form-check-label" for="check_hombre">
-                                Hombre
-                            </label>
-                        </div>
-                        <div class="form-check ms-5">
-                            <input class="form-check-input" type="radio" name="check_mujer" id="input_mujer" value="M">
-                            <label class="form-check-label" for="check_mujer">
-                                Mujer
-                            </label>
-                        </div>
-                    </div>
+                <input type="text" class="form-control" id="input_sexo" aria-describedby="indicacion">
+                <p id="indicacion" class="form-text">Sólo H para hombre o M para mujer</p>
 
                 <label class="form-label">Peso</label>
                 <input type="text" class="form-control" id="input_peso" aria-describedby="indicacion">
-                <p id="indicacion" class="form-text">En kilogramos</p>
+                <p id="indicacion" class="form-text">Sólo numeros entre 30 y 900</p>
 
                 <label class="form-label">Altura</label>
                 <input type="text" class="form-control" id="input_altura" aria-describedby="indicacion">
-                <p id="indicacion" class="form-text">En metros</p>
+                <p id="indicacion" class="form-text">Sólo numeros entre 1 y 4</p>
+
+        
 
                 <button type="submit" class="btn btn-outline-primary my-1" id="boton_crear">Crear Persona</button>
                 <button type="submit" class="btn btn-outline-success my-1" id="boton_mostrar">Mostrar Generacion</button>
