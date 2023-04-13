@@ -20,9 +20,23 @@ class Persona{
         this.#peso=peso;
         this.#altura=altura;
     }
-
+    get getNombre(){
+        return this.#nombre;
+    }
     get getEdad(){
         return this.#edad;
+    }
+    get getDni(){
+        return this.#dni;
+    }
+    get getSexo(){
+        return this.#sexo;
+    }
+    get getPeso(){
+        return this.#peso;
+    }
+    get getAltura(){
+        return this.#altura;
     }
 
     set setNombre(nombre){
@@ -58,6 +72,33 @@ class Persona{
         }
         alert(`Generacion: ${generacion}, Caracteristica: ${caracteristica}`)
     }
+
+    esMayorDeEdad(){
+
+    }
+
+    mostrarDatos(){
+        return this;
+    }
 }
 
-let persona = new Persona("marcelo gallardo", 58, 22327188,"M","65kg","1,70m")
+let persona = null
+//logica de los datos del formulario
+let ingreso = document.querySelector("#ingreso");
+ingreso.addEventListener("submit", (evento) =>{
+    evento.preventDefault();
+
+    switch(evento.submitter.id){
+        case "boton_crear":     persona=new Persona();
+                                break;
+        case "boton_mostrar":   if(persona === null){
+                                    alert("Debe ingresar los datos de una persona antes de consultar su generacion")
+                                };
+                                break;
+        case "boton_verificar": if(persona === null){
+                                    alert("Debe ingresar los datos de una persona antes de verificar la mayoria de edad")
+                                };
+                                break;
+    }
+
+})
